@@ -115,6 +115,7 @@ router.post('/reviews', requireToken, (req, res, next) => {
   }
   // set owner of new review to be current user
   req.body.review.owner = req.user.id
+  req.body.review.ownerEmail = req.user.email
   Review.create(req.body.review)
     // respond to succesful `create` with status 201 and JSON of new "review"
     .then(review => {
