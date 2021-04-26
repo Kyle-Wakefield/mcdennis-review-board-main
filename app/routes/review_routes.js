@@ -171,18 +171,18 @@ router.delete('/reviews/:id', requireToken, (req, res, next) => {
     .catch(next)
 })
 
-// // DESTROY ALL REVIEWS UNAUTHORIZED
-// // THIS IS FOR DEVELOPMENT ONLY!!!!
-// router.delete('/reviews', (req, res, next) => {
-//   Review.find()
-//     .then(handle404)
-//     .then(reviews => {
-//       reviews.forEach(review => review.deleteOne())
-//     })
-//     // send back 204 and no content if the deletion succeeded
-//     .then(() => res.sendStatus(204))
-//     // if an error occurs, pass it to the handler
-//     .catch(next)
-// })
+// DESTROY ALL REVIEWS UNAUTHORIZED
+// THIS IS FOR DEVELOPMENT ONLY!!!!
+router.delete('/reviews', (req, res, next) => {
+  Review.find()
+    .then(handle404)
+    .then(reviews => {
+      reviews.forEach(review => review.deleteOne())
+    })
+    // send back 204 and no content if the deletion succeeded
+    .then(() => res.sendStatus(204))
+    // if an error occurs, pass it to the handler
+    .catch(next)
+})
 
 module.exports = router
