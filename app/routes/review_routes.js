@@ -46,22 +46,6 @@ router.get('/reviews', (req, res, next) => {
     .catch(next)
 })
 
-// // INDEX SELF
-// // GET /reviews/my-reviews
-// router.get('/reviews/my-reviews', requireToken, (req, res, next) => {
-//   Review.find({ owner: req.user.id })
-//     .then(reviews => {
-//       // `reviews` will be an array of Mongoose documents
-//       // we want to convert each one to a POJO, so we use `.map` to
-//       // apply `.toObject` to each one
-//       return reviews.map(review => review.toObject())
-//     })
-//     // respond with status 200 and JSON of the reviews
-//     .then(reviews => res.status(200).json({ reviews: reviews }))
-//     // if an error occurs, pass it to the handler
-//     .catch(next)
-// })
-
 // INDEX USER
 // GET /reviews/users/5a7db6c74d55bc51bdf39793
 router.get('/reviews/users/:user', (req, res, next) => {
