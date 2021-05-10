@@ -1,5 +1,5 @@
 ## Links
-Deployed Server:
+Deployed Server: https://mcdennis-review-board.herokuapp.com
 
 ## ERD
 ![wireframe-erd](https://media.git.generalassemb.ly/user/35162/files/d8bd2280-a296-11eb-9cd4-9e1d3eca181a)
@@ -27,7 +27,7 @@ Add your own scripts to test your custom API.
 Request:
 
 ```sh
-curl --include --request POST http://localhost:4741/sign-up \
+curl --include --request POST https://mcdennis-review-board.herokuapp.com/sign-up \
   --header "Content-Type: application/json" \
   --data '{
     "credentials": {
@@ -61,7 +61,7 @@ Content-Type: application/json; charset=utf-8
 Request:
 
 ```sh
-curl --include --request POST http://localhost:4741/sign-in \
+curl --include --request POST https://mcdennis-review-board.herokuapp.com/sign-in \
   --header "Content-Type: application/json" \
   --data '{
     "credentials": {
@@ -95,7 +95,7 @@ Content-Type: application/json; charset=utf-8
 Request:
 
 ```sh
-curl --include --request PATCH http://localhost:4741/change-password/ \
+curl --include --request PATCH https://mcdennis-review-board.herokuapp.com/change-password/ \
   --header "Authorization: Bearer $TOKEN" \
   --header "Content-Type: application/json" \
   --data '{
@@ -121,7 +121,7 @@ HTTP/1.1 204 No Content
 Request:
 
 ```sh
-curl --include --request DELETE http://localhost:4741/sign-out/ \
+curl --include --request DELETE https://mcdennis-review-board.herokuapp.com/sign-out/ \
   --header "Authorization: Bearer $TOKEN"
 ```
 
@@ -152,7 +152,7 @@ HTTP/1.1 204 No Content
 Request:
 
 ```sh
-curl "http://localhost:4741/reviews" \
+curl "https://mcdennis-review-board.herokuapp.com/reviews" \
   --include \
   --request POST \
   --header "Content-Type: application/json" \
@@ -196,7 +196,7 @@ Content-Type: application/json; charset=utf-8
 Request:
 
 ```sh
-curl "http://localhost:4741/reviews" \
+curl "https://mcdennis-review-board.herokuapp.com/reviews" \
   --include \
   --request GET
 ```
@@ -246,7 +246,7 @@ Content-Type: application/json; charset=utf-8
 Request:
 
 ```sh
-curl "http://localhost:4741/reviews/users/$USER_ID" \
+curl "https://mcdennis-review-board.herokuapp.com/reviews/users/$USER_ID" \
   --include \
   --request GET
 ```
@@ -296,7 +296,7 @@ Content-Type: application/json; charset=utf-8
 Request:
 
 ```sh
-curl "http://localhost:4741/reviews/$ID" \
+curl "https://mcdennis-review-board.herokuapp.com/reviews/$ID" \
   --include \
   --request GET
 ```
@@ -331,7 +331,7 @@ Content-Type: application/json; charset=utf-8
 Request:
 
 ```sh
-curl "http://localhost:4741/reviews/items/$ITEM" \
+curl "https://mcdennis-review-board.herokuapp.com/reviews/items/$ITEM" \
   --include \
   --request GET
 ```
@@ -381,7 +381,7 @@ Content-Type: application/json; charset=utf-8
 Request:
 
 ```sh
-curl "http://localhost:4741/reviews/$ID" \
+curl "https://mcdennis-review-board.herokuapp.com/reviews/$ID" \
   --include \
   --request PATCH \
   --header "Content-Type: application/json" \
@@ -410,7 +410,7 @@ TP/1.1 204 No Content
 Request:
 
 ```sh
-curl "http://localhost:4741/reviews/$ID" \
+curl "https://mcdennis-review-board.herokuapp.com/reviews/$ID" \
   --include \
   --request DELETE
   --header "Authorization: Bearer $TOKEN"
